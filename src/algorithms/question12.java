@@ -1,6 +1,4 @@
 package algorithms;
-import java.util.Map;
-import java.util.HashMap;
 
 public class question12 {
     static class Solution{
