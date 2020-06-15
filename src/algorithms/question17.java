@@ -31,14 +31,18 @@ public class question17 {
             else {
                 String firstCh = two.substring(0, 1);
                 String letters = phone.get(firstCh);
-                for (char c:letters.toCharArray()){
-                    resultOfTwo(one+c,two.substring(1));
+                if (letters == null)
+                    resultOfTwo(one,two.substring(1));
+                else {
+                    for (char c : letters.toCharArray()) {
+                        resultOfTwo(one + c, two.substring(1));
+                    }
                 }
             }
         }
     }
     public static void main(String[] args){
         Solution solution = new Solution();
-        System.out.println(solution.letterCombinations("233"));
+        System.out.println(solution.letterCombinations("213"));
     }
 }
