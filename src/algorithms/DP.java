@@ -27,9 +27,9 @@ public class DP {
         for (int coin : coins) {
             for (int i = coin; i <= amount; i++) {
                 // 根据动态转移方程求出最小值
-                if (coin <= i) {
+//                if (coin <= i) {
                     dp[i] = Math.min(dp[i], dp[i - coin] + 1);
-                }
+//                }
             }
         }
         // 如果 `dp[amount] === amount+1`说明没有最优解返回-1,否则返回最优解
